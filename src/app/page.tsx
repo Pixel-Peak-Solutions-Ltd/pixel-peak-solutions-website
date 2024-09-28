@@ -1,4 +1,4 @@
-import { AboutSection } from '@/sections/About';
+import { AboutSection } from '@/sections/About/About';
 import { ContactSection } from '@/sections/Contact';
 import { Footer } from '@/sections/Footer';
 import { Header } from '@/sections/Header';
