@@ -12,7 +12,7 @@ import ReactIcon from '@/assets/icons/react.svg';
 import JavaScriptIcon from '@/assets/icons/square-js.svg';
 import bookImage from '@/assets/images/book-cover.png';
 import logoImage from '@/assets/images/logo.png';
-import mapImage from '@/assets/images/map.png';
+import mapImage from '@/assets/images/map.jpg';
 import { Card } from '@/components/Card';
 import { CardHeader } from '@/components/CardHeader';
 import { SectionHeader } from '@/components/SectionHeader';
