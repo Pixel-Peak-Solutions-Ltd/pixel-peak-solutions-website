@@ -115,8 +115,11 @@ export const HeroSection = () => {
         <div className="flex flex-col items-center">
           <Image
             src={teamWork}
-            className="size-[115px] object-fill"
-            alt="Person peeking from behind laptop"
+            width={100}
+            height={100}
+            priority
+            className="object-fill"
+            alt="Team Work"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full relative">

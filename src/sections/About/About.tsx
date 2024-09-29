@@ -7,6 +7,7 @@ import IosIcon from '@/assets/icons/ios.svg';
 import KotlinIcon from '@/assets/icons/kotlin.svg';
 import MongoDBIcon from '@/assets/icons/mongodb.svg';
 import NextJSIcon from '@/assets/icons/nextjs.svg';
+import PostgreSQLIcon from '@/assets/icons/postgresql.svg';
 import NodeJSIcon from '@/assets/icons/nodejs.svg';
 import ReactIcon from '@/assets/icons/react.svg';
 import JavaScriptIcon from '@/assets/icons/square-js.svg';
@@ -27,6 +28,7 @@ const toolboxItems = [
   { title: 'NextJS', iconType: NextJSIcon },
   { title: 'NodeJS', iconType: NodeJSIcon },
   { title: 'MongoDB', iconType: MongoDBIcon },
+  { title: 'PostgreSQL', iconType: PostgreSQLIcon },
   { title: 'GitHub', iconType: GitHubIcon },
   { title: 'Flutter', iconType: FlutterIcon },
   { title: 'Dart', iconType: DartIcon },

@@ -12,7 +12,7 @@ const hobbies = [
     top: '5%',
   },
   {
-    title: 'Quality assurance',
+    title: 'Quality Assurance',
     emoji: '💎',
     left: '50%',
     top: '5%',
@@ -51,7 +51,7 @@ const BeyondTheCode = () => {
         {hobbies.map((hobby) => (
           <motion.div
             key={hobby.title}
-            className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+            className="inline-flex items-center gap-2 px-4 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute whitespace-nowrap"
             style={{
               left: hobby.left,
               top: hobby.top,
