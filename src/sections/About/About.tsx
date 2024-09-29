@@ -1,24 +1,25 @@
+import AndroidIcon from '@/assets/icons/android.svg';
 import CSSIcon from '@/assets/icons/css3.svg';
+import DartIcon from '@/assets/icons/dart.svg';
+import FlutterIcon from '@/assets/icons/flutter.svg';
 import GitHubIcon from '@/assets/icons/github.svg';
+import IosIcon from '@/assets/icons/ios.svg';
+import KotlinIcon from '@/assets/icons/kotlin.svg';
+import MongoDBIcon from '@/assets/icons/mongodb.svg';
+import NextJSIcon from '@/assets/icons/nextjs.svg';
 import NodeJSIcon from '@/assets/icons/nodejs.svg';
 import ReactIcon from '@/assets/icons/react.svg';
-import NextJSIcon from '@/assets/icons/nextjs.svg';
-import MongoDBIcon from '@/assets/icons/mongodb.svg';
-import FlutterIcon from '@/assets/icons/flutter.svg';
 import JavaScriptIcon from '@/assets/icons/square-js.svg';
-import DartIcon from '@/assets/icons/dart.svg';
-import KotlinIcon from '@/assets/icons/kotlin.svg';
-import IosIcon from '@/assets/icons/ios.svg';
-import AndroidIcon from '@/assets/icons/android.svg';
 import bookImage from '@/assets/images/book-cover.png';
-import mapImage from '@/assets/images/map.png';
 import logoImage from '@/assets/images/logo.png';
+import mapImage from '@/assets/images/map.png';
 import { Card } from '@/components/Card';
 import { CardHeader } from '@/components/CardHeader';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ToolboxItems } from '@/components/ToolboxItems';
 import Image from 'next/image';
 import BeyondTheCode from './BeyondTheCode';
+
 const toolboxItems = [
   { title: 'CSS3', iconType: CSSIcon },
   { title: 'JavaScript', iconType: JavaScriptIcon },
