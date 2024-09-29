@@ -5,6 +5,7 @@ import grainImage from '@/assets/images/grain.jpg';
 import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
 import { HeroOrbit } from '@/components/HeroOrbit';
+import Link from 'next/link';
 
 export const HeroSection = () => {
   return (
@@ -137,14 +138,21 @@ export const HeroSection = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <Link
+            href="#projects"
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-0"
+          >
             <span className="font-semibold">Explore Our Work</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+          </Link>
+
+          <Link
+            href="#contact"
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl z-0"
+          >
             <span className="">👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

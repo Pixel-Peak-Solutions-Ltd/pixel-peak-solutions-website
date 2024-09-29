@@ -1,48 +1,100 @@
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
-import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
-import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
-import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
+import chutyRoomsImage from '@/assets/images/chuty-rooms.png';
+import keeronImage from '@/assets/images/keeron.png';
+import vicafeLoyaltyImage from '@/assets/images/vicafe-loyalty.png';
+import bakingTalesImage from '@/assets/images/baking-tales.png';
+import travelBuddyImage from '@/assets/images/travel-buddy.png';
+import comfySlothImage from '@/assets/images/comfy-sloth.png';
 import { Card } from '@/components/Card';
 import { SectionHeader } from '@/components/SectionHeader';
 import Image from 'next/image';
 
 const portfolioProjects = [
   {
-    company: 'Acme Corp',
+    company: 'ViCOLLECTIVE AG',
     year: '2022',
-    title: 'Dark Saas Landing Page',
+    title: 'ViCAFE Loyalty',
     results: [
-      { id: 1, title: 'Enhanced user experience by 40%' },
-      { id: 2, title: 'Improved site speed by 50%' },
-      { id: 3, title: 'Increased mobile traffic by 35%' },
+      { id: 1, title: 'Welcome coffee lover' },
+      { id: 2, title: 'Scan the QR code' },
+      { id: 3, title: 'Easy to use' },
+      { id: 4, title: 'Collected and claim' },
     ],
-    link: 'https://youtu.be/dtyhP4gX68E?si=ftDFSbmRBUvNN-q3',
-    image: darkSaasLandingPage,
+    link: 'https://apps.apple.com/us/app/vicafe-loyalty/id6474923930',
+    image: vicafeLoyaltyImage,
   },
   {
-    company: 'Innovative Co',
-    year: '2021',
-    title: 'Light Saas Landing Page',
+    company: 'Keeron',
+    year: '2024',
+    title: 'Keeron',
     results: [
-      { id: 1, title: 'Boosted sales by 20%' },
-      { id: 2, title: 'Expanded customer reach by 35%' },
-      { id: 3, title: 'Increased brand awareness by 15%' },
+      { id: 1, title: 'Accelerate your careers' },
+      { id: 2, title: 'Collaborate with industry experts' },
+      { id: 3, title: 'Create comprehensive career plans' },
     ],
-    link: 'https://youtu.be/dtyhP4gX68E?si=ftDFSbmRBUvNN-q3',
-    image: lightSaasLandingPage,
+    link: 'https://play.google.com/store/search?q=keeron&c=apps&hl=en',
+    image: keeronImage,
   },
   {
-    company: 'Quantum Dynamics',
-    year: '2023',
-    title: 'AI Startup Landing Page',
+    company: 'Chuty Bangladesh Private Limited',
+    year: '2024',
+    title: 'ChutyRooms',
     results: [
-      { id: 1, title: 'Enhanced user experience by 40%' },
-      { id: 2, title: 'Improved site speed by 50%' },
-      { id: 3, title: 'Increased mobile traffic by 35%' },
+      { id: 1, title: 'Largest growing hospitality partner' },
+      {
+        id: 2,
+        title: 'Online portal for travel and stays',
+      },
+      { id: 3, title: 'Founded in 2018 in Chittagong, Bangladesh' },
     ],
-    link: 'https://youtu.be/dtyhP4gX68E?si=ftDFSbmRBUvNN-q3',
-    image: aiStartupLandingPage,
+    link: 'https://play.google.com/store/apps/details?id=com.chutyrooms.crapp&hl=en',
+    image: chutyRoomsImage,
+  },
+  {
+    company: 'Baking Tales',
+    year: '2024',
+    title: 'Baking Tales',
+    results: [
+      { id: 1, title: 'Beautiful and scrumptious desserts' },
+      {
+        id: 2,
+        title: 'Variety of baked goods',
+      },
+      { id: 3, title: 'Finest carefully sourced ingredients' },
+    ],
+    link: 'https://baking-tales-v2.vercel.app/',
+    image: bakingTalesImage,
+  },
+  {
+    company: 'Travel Buddy',
+    year: '2024',
+    title: 'Travel Buddy',
+    results: [
+      { id: 1, title: 'Connect like-minded travel companions' },
+      {
+        id: 2,
+        title: 'Share and find trip plans',
+      },
+      { id: 3, title: 'Enhance travel safety and enjoyment' },
+    ],
+    link: 'https://travel-buddy-front-end.vercel.app/',
+    image: travelBuddyImage,
+  },
+  {
+    company: 'Comfy Sloth',
+    year: '2022',
+    title: 'Comfy Sloth',
+    results: [
+      { id: 1, title: 'Comfortable, modern furniture selection' },
+      {
+        id: 2,
+        title: 'Cozy sectionals for gatherings',
+      },
+      { id: 3, title: 'Inviting beds for relaxation' },
+    ],
+    link: 'https://comfy-sloth-furnitures1.netlify.app/',
+    image: comfySlothImage,
   },
 ];
 //
@@ -52,8 +104,8 @@ export const ProjectsSection = () => {
       <div className="container">
         <SectionHeader
           title="Featured Projects"
-          eyebrow="Real-World Results"
-          description=" See how we transform concepts into engaging digital experiences."
+          eyebrow="Our Work"
+          description="Here are some of the projects that we and our team have completed."
         />
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, idx) => (
