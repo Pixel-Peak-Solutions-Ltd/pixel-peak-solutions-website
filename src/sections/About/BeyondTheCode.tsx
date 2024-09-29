@@ -6,20 +6,20 @@ import { useRef } from 'react';
 
 const hobbies = [
   {
-    title: 'Painting',
-    emoji: '🎨',
+    title: 'SEO',
+    emoji: '🎯',
     left: '5%',
     top: '5%',
   },
   {
-    title: 'Photography',
-    emoji: '📸',
+    title: 'Quality assurance',
+    emoji: '💎',
     left: '50%',
     top: '5%',
   },
   {
-    title: 'Hiking',
-    emoji: '🥾',
+    title: 'Business Analysis',
+    emoji: '📈',
     left: '35%',
     top: '40%',
   },
@@ -28,18 +28,6 @@ const hobbies = [
     emoji: '🎮',
     left: '10%',
     top: '35%',
-  },
-  {
-    title: 'Music',
-    emoji: '🎸',
-    left: '70%',
-    top: '45%',
-  },
-  {
-    title: 'Fitness',
-    emoji: '🏋️‍♂️',
-    left: '5%',
-    top: '65%',
   },
   {
     title: 'Reading',

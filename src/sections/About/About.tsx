@@ -1,12 +1,18 @@
-import ChromeIcon from '@/assets/icons/chrome.svg';
 import CSSIcon from '@/assets/icons/css3.svg';
 import GitHubIcon from '@/assets/icons/github.svg';
-import HTMLIcon from '@/assets/icons/html5.svg';
+import NodeJSIcon from '@/assets/icons/nodejs.svg';
 import ReactIcon from '@/assets/icons/react.svg';
+import NextJSIcon from '@/assets/icons/nextjs.svg';
+import MongoDBIcon from '@/assets/icons/mongodb.svg';
+import FlutterIcon from '@/assets/icons/flutter.svg';
 import JavaScriptIcon from '@/assets/icons/square-js.svg';
+import DartIcon from '@/assets/icons/dart.svg';
+import KotlinIcon from '@/assets/icons/kotlin.svg';
+import IosIcon from '@/assets/icons/ios.svg';
+import AndroidIcon from '@/assets/icons/android.svg';
 import bookImage from '@/assets/images/book-cover.png';
 import mapImage from '@/assets/images/map.png';
-import smileEmoji from '@/assets/images/memoji-smile.png';
+import logoImage from '@/assets/images/logo.png';
 import { Card } from '@/components/Card';
 import { CardHeader } from '@/components/CardHeader';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -14,57 +20,18 @@ import { ToolboxItems } from '@/components/ToolboxItems';
 import Image from 'next/image';
 import BeyondTheCode from './BeyondTheCode';
 const toolboxItems = [
-  { title: 'JavaScript', iconType: JavaScriptIcon },
-  { title: 'HTML5', iconType: HTMLIcon },
   { title: 'CSS3', iconType: CSSIcon },
+  { title: 'JavaScript', iconType: JavaScriptIcon },
   { title: 'React', iconType: ReactIcon },
-  { title: 'Chrome', iconType: ChromeIcon },
+  { title: 'NextJS', iconType: NextJSIcon },
+  { title: 'NodeJS', iconType: NodeJSIcon },
+  { title: 'MongoDB', iconType: MongoDBIcon },
   { title: 'GitHub', iconType: GitHubIcon },
-];
-
-const hobbies = [
-  {
-    title: 'Painting',
-    emoji: '🎨',
-    left: '5%',
-    top: '5%',
-  },
-  {
-    title: 'Photography',
-    emoji: '📸',
-    left: '50%',
-    top: '5%',
-  },
-  {
-    title: 'Hiking',
-    emoji: '🥾',
-    left: '35%',
-    top: '40%',
-  },
-  {
-    title: 'Gaming',
-    emoji: '🎮',
-    left: '10%',
-    top: '35%',
-  },
-  {
-    title: 'Music',
-    emoji: '🎸',
-    left: '70%',
-    top: '45%',
-  },
-  {
-    title: 'Fitness',
-    emoji: '🏋️‍♂️',
-    left: '5%',
-    top: '65%',
-  },
-  {
-    title: 'Reading',
-    emoji: '📚',
-    left: '45%',
-    top: '70%',
-  },
+  { title: 'Flutter', iconType: FlutterIcon },
+  { title: 'Dart', iconType: DartIcon },
+  { title: 'Kotlin', iconType: KotlinIcon },
+  { title: 'Android', iconType: AndroidIcon },
+  { title: 'Ios', iconType: IosIcon },
 ];
 
 export const AboutSection = () => {
@@ -123,9 +90,9 @@ export const AboutSection = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image
-                  src={smileEmoji}
+                  src={logoImage}
                   alt="smiling emoji"
-                  className="size-20"
+                  className="size-15"
                 />
               </div>
             </Card>
