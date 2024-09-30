@@ -11,7 +11,7 @@ import PostgreSQLIcon from '@/assets/icons/postgresql.svg';
 import NodeJSIcon from '@/assets/icons/nodejs.svg';
 import ReactIcon from '@/assets/icons/react.svg';
 import JavaScriptIcon from '@/assets/icons/square-js.svg';
-import bookImage from '@/assets/images/book-cover.png';
+import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import logoImage from '@/assets/images/logo.png';
 import mapImage from '@/assets/images/map.jpg';
 import { Card } from '@/components/Card';
@@ -37,6 +37,13 @@ const toolboxItems = [
   { title: 'Ios', iconType: IosIcon },
 ];
 
+const services = [
+  { id: 1, title: 'Web Development' },
+  { id: 2, title: 'App Development' },
+  { id: 3, title: 'SEO Optimization' },
+  { id: 4, title: 'Software Quality Assurance' },
+];
+
 export const AboutSection = () => {
   return (
     <div id="about" className="py-20 lg:py-28">
@@ -52,11 +59,21 @@ export const AboutSection = () => {
             {/* 1 */}
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="Our Reads"
-                description="Explore the books shaping our perspective"
+                title="Our Services"
+                description="Our personalized services meet your needs"
               />
-              <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book Cover" />
+              <div className="flex flex-col items-center flex-1">
+                <ul className="flex flex-col gap-7 md:gap-2">
+                  {services.map((service) => (
+                    <li
+                      key={service.id}
+                      className="flex gap-2 text-base text-white/50"
+                    >
+                      <CheckCircleIcon className="size-6" />
+                      <span>{service.title}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Card>
             {/* 2 */}
