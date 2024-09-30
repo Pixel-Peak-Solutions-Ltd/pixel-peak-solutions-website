@@ -2,7 +2,7 @@ import ArrowUpRight from '@/assets/icons/arrow-up-right.svg';
 import Link from 'next/link';
 
 const footerLinks = [
-  { title: 'Youtube', href: '#' },
+  { title: '[+88] 01761264426', href: '#' },
   { title: 'Facebook', href: '#' },
   { title: 'Instagram', href: 'https://www.instagram.com/pixelpeak_it/' },
   { title: 'LinkedIn', href: '#' },
