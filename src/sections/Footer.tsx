@@ -2,10 +2,13 @@ import ArrowUpRight from '@/assets/icons/arrow-up-right.svg';
 import Link from 'next/link';
 
 const footerLinks = [
-  { title: '[+88] 01761264426', href: '#' },
+  { title: 'Contact Us Now: [+88] 01761264426', href: '#' },
   { title: 'Facebook', href: '#' },
   { title: 'Instagram', href: 'https://www.instagram.com/pixelpeak_it/' },
-  { title: 'LinkedIn', href: '#' },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/pixel-peak-solutions-ltd/',
+  },
 ];
 
 export const Footer = () => {
