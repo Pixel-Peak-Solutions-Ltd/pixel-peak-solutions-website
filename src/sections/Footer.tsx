@@ -52,7 +52,12 @@ export const Footer = () => {
                 Contact Us
               </h3>
               <div className="text-white/40">
-                <p>Contact Us Now: [+88] 01761264426</p>
+                <Link
+                  href={`tel:+8801761264426`}
+                  className="hover:text-white transition-colors"
+                >
+                  Contact Us Now: +8801761264426
+                </Link>
               </div>
             </div>
           </div>
