@@ -1,15 +1,15 @@
+import Link from 'next/link';
 import Image from 'next/image';
+import { HeroOrbit } from '@/components/HeroOrbit';
 import teamWork from '@/assets/images/team-work.gif';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
-import { HeroOrbit } from '@/components/HeroOrbit';
-import Link from 'next/link';
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -158,6 +158,6 @@ export const HeroSection = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

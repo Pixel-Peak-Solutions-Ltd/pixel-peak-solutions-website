@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import EmailIcon from '@/assets/icons/email.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
-import Link from 'next/link';
 
 export const ContactSection = () => {
   const email = 'contact.pixelpeak.solutions@gmail.com';

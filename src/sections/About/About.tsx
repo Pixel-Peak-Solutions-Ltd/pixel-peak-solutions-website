@@ -1,3 +1,9 @@
+import Image from 'next/image';
+import { Card } from '@/components/Card';
+import BeyondTheCode from './BeyondTheCode';
+import { CardHeader } from '@/components/CardHeader';
+import { SectionHeader } from '@/components/SectionHeader';
+import { ToolboxItems } from '@/components/ToolboxItems';
 import AndroidIcon from '@/assets/icons/android.svg';
 import CSSIcon from '@/assets/icons/css3.svg';
 import DartIcon from '@/assets/icons/dart.svg';
@@ -14,12 +20,6 @@ import JavaScriptIcon from '@/assets/icons/square-js.svg';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import logoImage from '@/assets/images/logo.png';
 import mapImage from '@/assets/images/map.jpg';
-import { Card } from '@/components/Card';
-import { CardHeader } from '@/components/CardHeader';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ToolboxItems } from '@/components/ToolboxItems';
-import Image from 'next/image';
-import BeyondTheCode from './BeyondTheCode';
 
 const toolboxItems = [
   { title: 'CSS3', iconType: CSSIcon },
@@ -46,7 +46,7 @@ const services = [
 
 export const AboutSection = () => {
   return (
-    <div id="about" className="py-20 lg:py-28">
+    <section id="about" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="About Us"
@@ -119,6 +119,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

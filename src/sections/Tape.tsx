@@ -1,5 +1,5 @@
-import StarIcon from '@/assets/icons/star.svg';
 import { Fragment } from 'react';
+import StarIcon from '@/assets/icons/star.svg';
 
 const words = [
   'Performant',
@@ -17,7 +17,7 @@ const words = [
 
 export const TapeSection = () => {
   return (
-    <div className="py-16 lg:py-24 overflow-x-clip">
+    <section className="py-16 lg:py-24 overflow-x-clip">
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 -rotate-3 -mx-1">
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%)]">
           <div className="flex flex-none gap-4 pr-4 py-3 -translate-x-1/2 animate-move-left [animation-duration:30s]">
@@ -36,6 +36,6 @@ export const TapeSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

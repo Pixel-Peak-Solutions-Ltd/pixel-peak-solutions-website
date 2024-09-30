@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import { Card } from '@/components/Card';
+import { SectionHeader } from '@/components/SectionHeader';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import chutyRoomsImage from '@/assets/images/chuty-rooms.png';
@@ -6,9 +9,6 @@ import vicafeLoyaltyImage from '@/assets/images/vicafe-loyalty.png';
 import bakingTalesImage from '@/assets/images/baking-tales.png';
 import travelBuddyImage from '@/assets/images/travel-buddy.png';
 import comfySlothImage from '@/assets/images/comfy-sloth.png';
-import { Card } from '@/components/Card';
-import { SectionHeader } from '@/components/SectionHeader';
-import Image from 'next/image';
 
 const portfolioProjects = [
   {

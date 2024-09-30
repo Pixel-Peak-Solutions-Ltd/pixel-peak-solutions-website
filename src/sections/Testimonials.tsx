@@ -1,12 +1,12 @@
+import Image from 'next/image';
+import { Fragment } from 'react';
+import { Card } from '@/components/Card';
+import { SectionHeader } from '@/components/SectionHeader';
 import memojiAvatar1 from '@/assets/images/memoji-avatar-1.png';
 import memojiAvatar2 from '@/assets/images/memoji-avatar-2.png';
 import memojiAvatar3 from '@/assets/images/memoji-avatar-3.png';
 import memojiAvatar4 from '@/assets/images/memoji-avatar-4.png';
 import memojiAvatar5 from '@/assets/images/memoji-avatar-5.png';
-import { Card } from '@/components/Card';
-import { SectionHeader } from '@/components/SectionHeader';
-import Image from 'next/image';
-import { Fragment } from 'react';
 
 const testimonials = [
   {
@@ -43,7 +43,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Happy Clients"
@@ -89,10 +89,9 @@ export const TestimonialsSection = () => {
                 </Fragment>
               )),
             ]}
-            {/* Cards */}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
