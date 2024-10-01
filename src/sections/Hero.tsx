@@ -112,7 +112,7 @@ export const HeroSection = () => {
         </HeroOrbit>
       </div>
       <div className="container">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center lg:-mt-24">
           <Image
             src={teamWork}
             width={100}
@@ -121,7 +121,7 @@ export const HeroSection = () => {
             className="object-fill"
             alt="Team Work"
           />
-          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+          <div className="bg-gray-950 border border-gray-800 px-4 py-1 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-gray-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
@@ -132,11 +132,13 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
+            Shaping Tomorrow&apos;s Digital Experiences with Pixel Peak
+            Solutions Ltd
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            We specialize in transforming design into functional,
-            high-performing applications. Let&apos;s discuss your next project.
+            From concept to code, we transform your vision into powerful,
+            high-performing applications. Elevate your project with pixel peak
+            solutions
           </p>
         </div>
 
@@ -145,7 +147,7 @@ export const HeroSection = () => {
             href="#projects"
             className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-0"
           >
-            <span className="font-semibold">Explore Our Work</span>
+            <span className="font-semibold">Explore Our Expertise</span>
             <ArrowDown className="size-4" />
           </Link>
 
@@ -154,7 +156,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl z-0"
           >
             <span className="">👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
+            <span className="font-semibold">Let&apos;s Build Together</span>
           </Link>
         </div>
       </div>
