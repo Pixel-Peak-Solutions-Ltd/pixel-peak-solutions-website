@@ -26,10 +26,10 @@ export const Footer = () => {
                 Innovative digital solutions for your business needs.
               </p>
             </div>
-            {/* Quick Links */}
-            <nav className="flex flex-col items-center md:items-center">
+            {/* Follow Us */}
+            <nav className="flex flex-col text-center md:text-left mx-auto">
               <h3 className="text-white font-extrabold text-lg mb-4">
-                Quick Links
+                Follow Us
               </h3>
               <ul className="space-y-2">
                 {footerLinks.map((link) => (
