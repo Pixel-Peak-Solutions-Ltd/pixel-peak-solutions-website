@@ -132,8 +132,7 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Shaping Tomorrow&apos;s Digital Experiences with Pixel Peak
-            Solutions Ltd
+            Transform your ideas into reality with Pixel Peak Solutions Ltd.
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             From concept to code, we transform your vision into powerful,
