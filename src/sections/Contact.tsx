@@ -1,44 +1,25 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
-import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import grainImage from '@/assets/images/grain.jpg';
 
 export const ContactSection = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>(
-    'idle'
-  );
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
+  const recipientEmail = 'contact.pixelpeak.solutions@gmail.com';
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      setStatus('error');
-    }
+  const createGmailUrl = () => {
+    const to = recipientEmail;
+    const subject = encodeURIComponent(`${name} needs a quotation`);
+    const body = encodeURIComponent(
+      `${message}\n\nFrom: ${name} <${email}>`
+    );
+    return `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
   };
 
   const calendlyUrl = 'https://calendly.com/pixel-peak-solutions/consultation'; // Placeholder
@@ -60,7 +41,7 @@ export const ContactSection = () => {
               Have a question or a project in mind? Drop us a line.
             </p>
 
-            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+            <div className="mt-8 space-y-6">
               <div>
                 <label htmlFor="name" className="sr-only">
                   Name
@@ -104,50 +85,16 @@ export const ContactSection = () => {
                 />
               </div>
               <div>
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="w-full px-8 py-4 font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-200 disabled:bg-gray-400 transition-all duration-300 flex items-center justify-center"
+                <a
+                  href={createGmailUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-8 py-4 font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-200 transition-all duration-300 flex items-center justify-center"
                 >
-                  {status === 'loading' && (
-                    <svg
-                      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                  )}
-                  {status === 'loading' ? 'Sending...' : 'Send Message'}
-                </button>
+                  Send Message via Gmail
+                </a>
               </div>
-            </form>
-            {status === 'success' && (
-              <div className="mt-4 text-green-500 flex items-center">
-                <CheckCircleIcon className="w-5 h-5 mr-2" />
-                <p>Message sent successfully! We&apos;ll be in touch soon.</p>
-              </div>
-            )}
-            {status === 'error' && (
-              <div className="mt-4 text-red-500">
-                <p>
-                  Something went wrong. Please try again or email us directly.
-                </p>
-              </div>
-            )}
+            </div>
           </div>
 
           {/* Consultation Section */}

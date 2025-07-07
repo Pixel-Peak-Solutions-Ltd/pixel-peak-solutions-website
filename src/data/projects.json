@@ -1,0 +1,50 @@
+[
+  {
+    "company": "EdTech Platform",
+    "year": "2024",
+    "title": "EdTech Career Platform",
+    "description": "A comprehensive platform designed to help students and professionals accelerate their careers by connecting them with industry experts and providing personalized career roadmaps.",
+    "slug": "edtech-career-platform",
+    "article": "In today's competitive job market, navigating a successful career path can be challenging. Our client, an innovative EdTech startup, envisioned a platform that would bridge the gap between academic learning and real-world career success. We partnered with them to build a comprehensive solution that empowers users to take control of their professional development. The platform features a curated network of industry mentors, personalized career planning tools, and a resource library with expert-led content. By creating a seamless and engaging user experience, we helped our client launch a product that is already making a significant impact on the lives of its users."
+  },
+  {
+    "company": "ViCAFE",
+    "year": "2022",
+    "title": "Coffee Shop Loyalty App",
+    "description": "A mobile loyalty application for a popular coffee shop chain, designed to enhance customer engagement and drive repeat business through a seamless digital experience.",
+    "slug": "coffee-shop-loyalty-app",
+    "article": "ViCAFE, a beloved coffee shop chain, wanted to modernize its customer loyalty program and create a more engaging brand experience. We developed a sleek and intuitive mobile app that allows customers to earn points, redeem rewards, and receive personalized offers. The app features a QR-based loyalty system, a digital menu, and a store locator. By focusing on a user-centric design and a robust technical architecture, we delivered a solution that has not only increased customer retention but also provided valuable insights into consumer behavior."
+  },
+  {
+    "company": "ChutyRooms",
+    "year": "2024",
+    "title": "Boutique Hotel Management System",
+    "description": "A complete hotel management system for a boutique hotel chain, designed to streamline operations, enhance the guest experience, and drive direct bookings.",
+    "slug": "boutique-hotel-management-system",
+    "article": "For a growing boutique hotel chain, managing reservations, guest services, and daily operations efficiently was a major challenge. We designed and developed a custom hotel management system that automates key processes and provides a centralized platform for staff to manage all aspects of the hotel's operations. The system includes a booking engine, a channel manager, a front desk module, and a guest relationship management (GRM) system. The result is a powerful and easy-to-use solution that has enabled our client to improve operational efficiency, increase direct bookings, and deliver an exceptional guest experience."
+  },
+  {
+    "company": "Baking Tales",
+    "year": "2024",
+    "title": "Artisanal Bakery E-commerce Website",
+    "description": "A visually stunning e-commerce website for an artisanal bakery, designed to showcase their beautiful creations and provide a seamless online ordering experience.",
+    "slug": "artisanal-bakery-ecommerce-website",
+    "article": "Baking Tales, an artisanal bakery known for its exquisite desserts, needed an online presence that would reflect the quality and artistry of their products. We created a visually rich and user-friendly e-commerce website that captures the essence of their brand. The website features high-quality product photography, detailed descriptions, and a simple and secure checkout process. By combining beautiful design with a smooth user experience, we helped Baking Tales expand their reach and grow their online sales."
+  },
+  {
+    "company": "Travel Buddy",
+    "year": "2024",
+    "title": "Social Travel Planning Platform",
+    "description": "A social platform that connects like-minded travelers, allowing them to plan trips together, share recommendations, and discover new destinations.",
+    "slug": "social-travel-planning-platform",
+    "article": "Traveling with others can be a rewarding experience, but finding the right travel companions can be difficult. Our client, a travel-focused startup, wanted to create a platform that would make it easier for people to connect and travel together. We built a social travel planning platform that allows users to create profiles, browse trips, and connect with other travelers. The platform also includes features for collaborative trip planning, such as shared itineraries and group chat. The result is a vibrant and engaging community that is helping people from all over the world explore new destinations together."
+  },
+  {
+    "company": "Comfy Sloth",
+    "year": "2022",
+    "title": "Modern Furniture E-commerce Store",
+    "description": "A stylish and user-friendly e-commerce store for a modern furniture brand, designed to provide a seamless shopping experience and drive online sales.",
+    "slug": "modern-furniture-ecommerce-store",
+    "article": "Comfy Sloth, a brand specializing in modern and comfortable furniture, needed an e-commerce store that would reflect their brand's aesthetic and provide a top-notch shopping experience. We designed and developed a clean, minimalist, and highly functional e-commerce website that showcases their products in the best possible light. The website features high-resolution images, detailed product information, and a streamlined checkout process. By focusing on a mobile-first design and a fast, responsive user interface, we created an online store that has significantly boosted their online sales and brand visibility."
+  }
+]
