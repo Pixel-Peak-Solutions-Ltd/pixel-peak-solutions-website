@@ -1,9 +1,6 @@
-
 'use client';
 
-import { promises as fs } from 'fs';
-import path from 'path';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -24,59 +21,159 @@ const imageMap: any = {
 };
 
 export const ProjectsSection = ({ projects }: { projects: any[] }) => {
-  const [selectedProject, setSelectedProject] = useState(projects[0]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
+  const scrollToProject = (index: number) => {
+    if (scrollContainerRef.current && !isDesktop) {
+      const container = scrollContainerRef.current;
+      const card = container.children[index] as HTMLElement;
+      if (card) {
+        const cardLeft = card.offsetLeft;
+        const cardWidth = card.offsetWidth;
+        const containerWidth = container.offsetWidth;
+        const scrollPosition = cardLeft - (containerWidth - cardWidth) / 2;
+
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+    setActiveIndex(index);
+  };
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current && !isDesktop) {
+      const container = scrollContainerRef.current;
+      const scrollPosition = container.scrollLeft;
+      const cardWidth = container.offsetWidth * 0.85; // 85% width on mobile
+      const gap = 16; // gap between cards
+      const newIndex = Math.round(scrollPosition / (cardWidth + gap));
+      setActiveIndex(Math.max(0, Math.min(newIndex, projects.length - 1)));
+    }
+  };
 
   return (
-    <section id="projects" className="pb-16 lg:py-24">
-      <div className="container">
-        <SectionHeader
-          title="Featured Projects"
-          eyebrow="Our Work"
-          description="Here are some of the projects that we and our team have completed."
-        />
-        <div className="mt-12 lg:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
-          <div className="lg:col-span-1">
-            <div className="flex flex-col gap-4">
-              {projects.map((project) => (
-                <button
-                  key={project.slug}
-                  className={`text-left p-4 rounded-lg transition-colors duration-300 ${
-                    selectedProject.slug === project.slug
-                      ? 'bg-gray-800'
-                      : 'hover:bg-gray-800/50'
-                  }`}
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <h3 className="font-semibold text-lg">{project.title}</h3>
-                </button>
+      <section id="projects" className="py-16 lg:py-24 overflow-hidden">
+        <div className="container px-4 lg:px-8">
+          <SectionHeader
+              title="Featured Projects"
+              eyebrow="Our Work"
+              description="Explore our latest creations and success stories."
+          />
+
+          {/* Mobile Carousel */}
+          <div className="lg:hidden mt-12">
+            {/* Progress Indicators */}
+            <div className="flex justify-center gap-2 mb-6">
+              {projects.map((_, index) => (
+                  <button
+                      key={index}
+                      onClick={() => scrollToProject(index)}
+                      className={`h-1 rounded-full transition-all duration-300 ${
+                          index === activeIndex
+                              ? 'w-8 bg-white'
+                              : 'w-2 bg-white/30'
+                      }`}
+                      aria-label={`Go to project ${index + 1}`}
+                  />
+              ))}
+            </div>
+
+            {/* Scrollable Cards Container */}
+            <div
+                ref={scrollContainerRef}
+                onScroll={handleScroll}
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-6"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {projects.map((project, index) => (
+                  <div
+                      key={project.slug}
+                      className="flex-none w-[85%] snap-center"
+                  >
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                      <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
+                        <div className="aspect-video relative overflow-hidden">
+                          <Image
+                              src={imageMap[project.slug]}
+                              alt={project.title}
+                              fill
+                              className="object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
+                        </div>
+                        <div className="p-6">
+                          <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                          <p className="text-white/70 text-sm mb-4 line-clamp-2">
+                            {project.description}
+                          </p>
+                          <Link href={`/projects/${project.slug}`}>
+                            <button className="text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                              View Case Study →
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               ))}
             </div>
           </div>
-          <div className="lg:col-span-2">
-            <div className="sticky top-24">
-              <div className="rounded-lg overflow-hidden">
-                <Image
-                  src={imageMap[selectedProject.slug]}
-                  alt={selectedProject.title}
-                  width={800}
-                  height={600}
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-6">
-                <h3 className="font-semibold text-2xl">{selectedProject.title}</h3>
-                <p className="text-white/70 mt-4">{selectedProject.description}</p>
-                <Link href={`/projects/${selectedProject.slug}`}>
-                  <button className="bg-white text-gray-950 h-12 px-6 rounded-full font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                    Read Case Study
-                  </button>
-                </Link>
-              </div>
-            </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-8 mt-16">
+            {projects.map((project, index) => (
+                <div
+                    key={project.slug}
+                    className="group relative"
+                    style={{
+                      animationDelay: `${index * 100}ms`
+                    }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                  <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-500 hover:transform hover:scale-[1.02]">
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                          src={imageMap[project.slug]}
+                          alt={project.title}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <Link href={`/projects/${project.slug}`}>
+                          <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors transform -translate-y-4 group-hover:translate-y-0 duration-500">
+                            View Project
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-white/70 text-sm line-clamp-2">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
-

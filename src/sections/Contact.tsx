@@ -103,24 +103,21 @@ export const ContactSection = () => {
               <SparkleIcon className="w-12 h-12 text-yellow-400 mb-4" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-white">
-              Schedule a Consultation
+              Our Location
             </h2>
             <p className="text-lg text-white/60 mt-4 max-w-md mx-auto lg:mx-0">
-              Have a bigger project in mind or need expert advice? Schedule a
-              free 30-minute consultation with our team to discuss your project
-              in detail.
+              Come visit us at our office. We'd love to see you!
             </p>
-            <Link
-              href={calendlyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center mt-8 px-8 py-4 text-white bg-sky-500 rounded-xl transition-all duration-300 hover:bg-sky-600 hover:shadow-lg transform hover:-translate-y-1"
-            >
-              <span className="font-semibold text-base">
-                Book Your Free Call
-              </span>
-              <ArrowUpRightIcon className="w-5 h-5 ml-3" />
-            </Link>
+            <div className="mt-6 text-white/60">
+              <p>Pixel Peak Solutions</p>
+              <p>123 Tech Avenue, Suite 100</p>
+              <p>Dhaka, Bangladesh 12345</p>
+              <p className="mt-4">
+                <a href="mailto:contact.pixelpeak.solutions@gmail.com" className="hover:text-sky-400 transition-colors">
+                  contact.pixelpeak.solutions@gmail.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
