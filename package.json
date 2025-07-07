@@ -12,6 +12,7 @@
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.3.21",
     "next": "14.2.5",
+    "nodemailer": "^7.0.4",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.5",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
