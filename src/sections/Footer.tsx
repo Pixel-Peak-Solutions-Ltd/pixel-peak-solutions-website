@@ -19,12 +19,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-10 text-center lg:text-left">
           <div className="max-w-lg">
-            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white">
-              Let's build something great together.
-            </h2>
-            <p className="mt-4 text-white/60">
-              Have a project in mind? We'd love to hear about it.
-            </p>
+           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white">
+  Let&apos;s build something great together.
+</h2>
+<p className="mt-4 text-white/60">
+  Have a project in mind? We&apos;d love to hear about it.
+</p>
           </div>
           <Link
             href="/#contact"
