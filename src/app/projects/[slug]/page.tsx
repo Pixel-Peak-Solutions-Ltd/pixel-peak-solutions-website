@@ -1,8 +1,18 @@
-
 import { SectionHeader } from '@/components/SectionHeader';
 import { promises as fs } from 'fs';
 import path from 'path';
 import Link from 'next/link';
+
+// This function tells Next.js which dynamic pages to build
+export async function generateStaticParams() {
+  const projectsFilePath = path.join(process.cwd(), 'src', 'data', 'projects.json');
+  const projectsData = await fs.readFile(projectsFilePath, 'utf-8');
+  const projects = JSON.parse(projectsData);
+
+  return projects.map((project: any) => ({
+    slug: project.slug,
+  }));
+}
 
 export default async function ProjectPage({ params }: { params: { slug: string } }) {
   const projectsFilePath = path.join(process.cwd(), 'src', 'data', 'projects.json');
