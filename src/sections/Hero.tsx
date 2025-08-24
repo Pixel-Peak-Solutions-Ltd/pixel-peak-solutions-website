@@ -189,7 +189,7 @@ export const HeroSection = () => {
                   className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-500 hover:to-blue-600 text-black px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-emerald-400/30 min-w-[200px] font-semibold tracking-wide"
               >
                 <span className="text-2xl">🤝</span>
-                <span>Let's Build Together</span>
+                <span>Let&apos;s Build Together</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </div>
