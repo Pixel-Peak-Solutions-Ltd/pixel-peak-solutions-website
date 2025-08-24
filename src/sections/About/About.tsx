@@ -9,7 +9,7 @@ import CSSIcon from '@/assets/icons/css3.svg';
 import DartIcon from '@/assets/icons/dart.svg';
 import FlutterIcon from '@/assets/icons/flutter.svg';
 import GitHubIcon from '@/assets/icons/github.svg';
-import IosIcon from '@/assets/icons/ios.svg';
+import IosIcon from '@/assets/icons/Ios.svg';
 import KotlinIcon from '@/assets/icons/kotlin.svg';
 import MongoDBIcon from '@/assets/icons/mongodb.svg';
 import NextJSIcon from '@/assets/icons/nextjs.svg';
