@@ -105,9 +105,9 @@ export const ContactSection = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-white">
               Our Location
             </h2>
-            <p className="text-lg text-white/60 mt-4 max-w-md mx-auto lg:mx-0">
-              Come visit us at our office. We'd love to see you!
-            </p>
+  <p className="text-lg text-white/60 mt-4 max-w-md mx-auto lg:mx-0">
+  Come visit us at our office. We&apos;d love to see you!
+</p>
             <div className="mt-6 text-white/60">
               <p>Pixel Peak Solutions</p>
               <p>123 Tech Avenue, Suite 100</p>
